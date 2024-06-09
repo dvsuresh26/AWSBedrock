@@ -7,6 +7,13 @@
     "action":{
         "default_popup":"index.html",
         "default_title":"Simple blog generation Chrome Extension"
-    }
-    
-    }
+    },
+    "permissions": ["clipboardRead","activeTab","scripting"],
+    "host_permissions":["<all_urls>"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content_script.js"]
+      }
+    ]
+ }
